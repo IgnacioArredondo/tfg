@@ -1,0 +1,66 @@
+<div class="app layout-fixed-header">
+  <div class="sidebar-panel">
+    <div class="brand">
+      
+        <div class="brand-logo">PKPLANNING</div>
+      
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="['/home/dashboard']" ><md-icon>dashboard</md-icon> <span>Dashboard</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/home/projects']" routerLinkActive="router-link-active"><md-icon>assignment</md-icon> <span>{{'Projects'| translate }}</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/home/tasks']" routerLinkActive="router-link-active"><md-icon>assignment_ind</md-icon><span>{{'Tasks'| translate }}</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/home/client']" routerLinkActive="router-link-active"><md-icon>supervisor_account</md-icon><span>{{'Clients'| translate }}</span></a>
+        </li>
+        <li>
+          <a [routerLink]="['/home/users']" routerLinkActive="router-link-active"><md-icon>face</md-icon> <span>{{'Users'| translate }}</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-panel">
+    <div class="header">
+      <div class="row-header">
+      <span>{{globals.title}}</span>
+       <span class="row-spacer"></span>
+       <span class="app-action" [mdMenuTriggerFor]="appMenu">
+        <button md-button>
+          <span>{{user}}</span><md-icon>account_circle</md-icon>
+        </button>
+        </span>
+        <md-menu #appMenu="mdMenu">
+          <button md-menu-item [routerLink]="['/home/users']">
+        <md-icon>face</md-icon>
+        <span>My Profile</span>
+        </button>
+          <button md-menu-item disabled>
+        <md-icon>assignment_turned_in</md-icon>
+        <span>Finished Tasks</span>
+        </button>
+          <button md-menu-item disabled>
+         <md-icon>settings</md-icon>
+         <span>Settings</span>
+        </button>
+          <button md-menu-item disabled>
+        <md-icon>help</md-icon>
+        <span>Help</span>
+        </button>
+          <button md-raised-button (click)="logout()">
+        <md-icon>exit_to_app</md-icon>
+        <span>Logout</span>
+        </button>
+      </md-menu>
+    </div>
+    </div>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

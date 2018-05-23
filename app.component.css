@@ -1,0 +1,144 @@
+md-sidenav {
+  min-width: 260px;
+  background: #B6DCFE;
+  margin: 0px;
+  padding: 7px;
+  order: 1;
+}
+
+body {
+  font: 24px Helvetica;
+  padding: 0px;
+  margin: 0px;
+  margin-left: -8px;
+}
+
+#backlog {
+  min-height: 150%;
+  min-width: 100px;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+#center {
+  min-height: 150px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px;
+}
+
+#done {
+  min-height: 150px;
+  margin-left: 30px;
+  border: 1px;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  display: flex;
+}
+
+#main>article {
+  width: 200%;
+  height: 100%;
+  background: #ECECEC;
+  order: 2;
+}
+
+#row {
+  background: #ECECEC;
+}
+
+#nav {
+  background: rgb(45, 50, 62);
+  height: 400%;
+  margin: 0px;
+  padding: 7px;
+  order: 1;
+  color: rgba(255, 255, 255, .7);
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  background: #9AD1D4;
+}
+
+.app-action {
+  margin-right: 25px;
+  position: absolute;
+  right: 50px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.example-card {
+  width: 120px;
+  padding: 10px;
+  margin: 1px;
+  border-style: ridge;
+}
+
+.gu-mirror {
+  position: fixed!important;
+  margin: 0!important;
+  z-index: 9999!important;
+  opacity: .8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80)
+}
+
+.gu-hide {
+  display: none!important
+}
+
+.gu-unselectable {
+  -webkit-user-select: none!important;
+  -moz-user-select: none!important;
+  -ms-user-select: none!important;
+  user-select: none!important
+}
+
+.gu-transit {
+  opacity: .2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20)
+}
+.router-link-active {
+  color: rgba(255, 255, 255, .7);
+
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused label {
+    color: yellow;
+}
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: green;
+}

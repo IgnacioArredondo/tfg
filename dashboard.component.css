@@ -1,0 +1,25 @@
+
+.btn{
+
+    float: right;
+    padding-right:10px;
+    padding-left: 5px;
+    font-size: 1.4rem;
+    
+}
+
+.badge {
+
+   
+    font-size: 20px;
+}
+
+.card{
+
+    margin-bottom: 20px;
+}
+
+.card-block{
+
+    border-style:double;
+}

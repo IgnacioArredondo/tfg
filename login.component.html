@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <div class="card">
+      <img class="logo" align="middle" src="./assets/logo.png"/>
+        
+        <h2>{{'Login'|translate}}</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+      
+        <div class="form-group">
+        <label for="Username"> {{'Username'|translate}}</label>
+        <input type="text" placeholder="{{'Username'|translate}}" class="form-control"  id="Username" formControlName="username" >
+        </div>
+        <br> 
+        <div class="form-group">
+        <label for="Password"> {{'Password'|translate}} </label>
+        <input type="password" placeholder="{{'Password'|translate}}" class="form-control" id="Password" formControlName="password">  
+        </div>
+      
+        <br>
+        <button  class="btn btn-success" type="submit" [disabled]="!loginForm.valid" >{{'Enter'|translate}}</button>
+      </form>
+    </div>
+      <i>{{error}}</i>
+     
+ 
+

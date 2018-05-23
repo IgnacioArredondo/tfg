@@ -1,0 +1,35 @@
+   <div *ngFor="let task of tasks">
+       <div class="card">
+          <div class="card-block">
+           <h2 class="card-title">{{task.name}}</h2>
+            <h5 class="card-subtitle mb-2 text-muted">{{task.details}}</h5>
+            <h5 class="card-text">{{task.project}}</h5>
+      
+        <div *ngIf="now(task.end_date)==0">
+              <span class="badge badge-warning">Se acaba hoy el plazo</span>
+              <button type="button" class="btn btn-default" [routerLink]="['/home/activity',task._id]">
+                <span class="glyphicon glyphicon-time"></span> Registrar horas
+            </button>
+        </div>
+
+        <div *ngIf="now(task.end_date)==1">
+            <span class="badge badge-success">Hay tiempo</span>
+            <button type="button" class="btn btn-default" [routerLink]="['/home/activity',task._id]">
+              <span class="glyphicon glyphicon-time"></span> Registrar horas
+          </button>
+        </div>
+
+        <div *ngIf="now(task.end_date)==-1">
+            <span class="badge badge-danger">Pasado de fecha</span>
+            <button type="button" class="btn btn-default" [routerLink]="['/home/activity',task._id]">
+              <span class="glyphicon glyphicon-time"></span> Registrar horas
+          </button>
+        </div>
+             
+    </div>
+  </div>
+</div>
+  
+  
+
+ 

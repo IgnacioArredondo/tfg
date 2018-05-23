@@ -1,0 +1,38 @@
+img{
+
+    height:120px;
+    width:120px;
+    display:flex;
+    align-content: center;
+}
+
+h2{
+    color:#8ECF6C;
+}
+
+.card{
+
+    height:100%;
+    width:100%;
+    background-image: url(http://www.hrinfocare.com/userfiles/oa_tm.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    background-position-x: 500px;
+    background-position-y: 80px;
+    padding-left: 20px;
+}
+
+.btn{
+
+    font-size:1.3rem;
+}
+
+.form-control{
+
+    width:20%;
+}
+
+
+
+
